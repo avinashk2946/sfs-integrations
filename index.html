@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Integrations — SmartFoodSafe</title>
-<meta name="description" content="How SmartFoodSafe connects to IoT temperature devices, external laboratories, client master data systems, and more.">
+<title>Integrations - Smart Food Safe</title>
+<meta name="description" content="How Smart Food Safe connects to IoT temperature devices, external laboratories, client master data systems, and more.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -359,7 +359,7 @@
   <div class="wrap nav-row">
     <a href="#top" class="brand">
       <span class="brand-mark">SFS</span>
-      SmartFoodSafe
+      Smart Food Safe
     </a>
     <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" id="navToggle">
       <svg width="16" height="12" viewBox="0 0 16 12" fill="none"><path d="M0 1H16M0 6H16M0 11H16" stroke="#16211D" stroke-width="1.5"/></svg>
@@ -380,7 +380,7 @@
     <div class="wrap hero-grid">
       <div>
         <h1>Every part of your food safety operation, already wired together.</h1>
-        <p class="lede">SmartFoodSafe reads temperature straight off the sensor, sends samples to your lab and brings results back automatically, and keeps job titles, ingredients and production lines in sync with the systems you already run.</p>
+        <p class="lede">Smart Food Safe reads temperature straight off the sensor, sends samples to your lab and brings results back automatically, and keeps job titles, ingredients and production lines in sync with the systems you already run.</p>
         <div class="hero-stats">
           <div class="stat"><b>3</b><span>connection categories in production</span></div>
           <div class="stat"><b>8+</b><span>protocols supported end to end</span></div>
@@ -388,7 +388,7 @@
         </div>
       </div>
 
-      <div class="diagram-box" role="img" aria-label="Diagram showing IoT sensors, external laboratories, and client master data systems all connecting into SmartFoodSafe">
+      <div class="diagram-box" role="img" aria-label="Diagram showing IoT sensors, external laboratories, and client master data systems all connecting into Smart Food Safe">
         <svg viewBox="0 0 460 320" xmlns="http://www.w3.org/2000/svg">
           <!-- connecting lines -->
           <path class="flow-line" d="M100 60 C 180 60, 200 140, 260 155" stroke="#1F4E4A" stroke-width="1.6" fill="none"/>
@@ -412,7 +412,7 @@
 
           <!-- core node -->
           <rect x="260" y="120" width="150" height="80" rx="6" fill="#1F4E4A"/>
-          <text x="335" y="155" text-anchor="middle" fill="#fff" font-family="IBM Plex Serif" font-weight="600" font-size="15">SmartFoodSafe</text>
+          <text x="335" y="155" text-anchor="middle" fill="#fff" font-family="IBM Plex Serif" font-weight="600" font-size="15">Smart Food Safe</text>
           <text x="335" y="174" text-anchor="middle" fill="#CFE0DC" font-family="IBM Plex Mono" font-size="10.5">RECORD · LAB · IAM</text>
         </svg>
       </div>
@@ -438,7 +438,7 @@
       <div class="section-head">
         <div>
           <h2>Integration directory</h2>
-          <p>Filter by category to see exactly how each connection moves data in or out of SmartFoodSafe, and which channels it supports.</p>
+          <p>Filter by category to see exactly how each connection moves data in or out of Smart Food Safe, and which channels it supports.</p>
         </div>
       </div>
       <div class="filters" id="filterRow"></div>
@@ -467,7 +467,7 @@
           <h2 style="font-size:26px; margin-bottom:10px;">Don't see your system on this page?</h2>
           <p>Most integrations start from one of the channels above — SFTP, FTP, API or a direct device connection. Tell us what you're running today and we'll scope the connection.</p>
         </div>
-        <a href="mailto:integrations@smartfoodsafe.com" class="btn-primary">Email the integrations team</a>
+        <a href="mailto:support@smartfoodsafe.com" class="btn-primary">Email the integrations team</a>
       </div>
     </div>
   </section>
@@ -476,7 +476,7 @@
 
 <footer>
   <div class="wrap footer-row">
-    <span>© 2026 SmartFoodSafe. All connection details on this page are illustrative and configured per client.</span>
+    <span>© 2026 Smart Food Safe. All connection details on this page are illustrative and configured per client.</span>
     <div class="footer-links">
       <a href="https://smartfoodsafe.com/#">smartfoodsafe.com</a>
       <a href="#top">Back to top</a>
@@ -493,7 +493,7 @@
    ===================================================================== */
 
 const CATEGORIES = [
-  { id: "iot",     label: "IoT devices",  blurb: "Sensors and instruments that stream readings straight into SmartFoodSafe." },
+  { id: "iot",     label: "IoT devices",  blurb: "Sensors and instruments that stream readings straight into Smart Food Safe." },
   { id: "lab",     label: "Laboratory",   blurb: "Order and result exchange with third-party testing labs." },
   { id: "master",  label: "Master data",  blurb: "Reference data kept in sync with your source systems." },
   { id: "other",   label: "Other",        blurb: "Identity, printing and reporting connections." }
@@ -506,7 +506,7 @@ const INTEGRATIONS = [
     module: "RECORD",
     title: "Temperature & environmental sensors",
     description: "Bluetooth, USB and Wi-Fi probes report temperature and humidity readings directly into Smart Record, replacing manual logging on the plant floor.",
-    direction: { from: "Sensor / gateway", to: "SmartFoodSafe (RECORD)" },
+    direction: { from: "Sensor / gateway", to: "Smart Food Safe (RECORD)" },
     channels: ["Bluetooth", "USB", "Wi-Fi"],
     dataPoints: ["Reading value & unit", "Device ID", "Timestamp", "Location / asset tag", "Battery & signal status"]
   },
@@ -516,7 +516,7 @@ const INTEGRATIONS = [
     module: "LAB",
     title: "External laboratory orders & results",
     description: "Sample orders go out to your testing partner and results are matched back automatically, over whichever channel the lab supports — including partners such as Mérieux NutriSciences.",
-    direction: { from: "SmartFoodSafe (LAB)", to: "External laboratory", bidirectional: true },
+    direction: { from: "Smart Food Safe (LAB)", to: "External laboratory", bidirectional: true },
     channels: ["SFTP", "FTP", "FTPS", "API"],
     dataPoints: ["Sample ID & customer sample number", "Test panel requested", "Result value & unit", "Pass / fail flag", "Report attachment"]
   },
@@ -525,8 +525,8 @@ const INTEGRATIONS = [
     category: "master",
     module: "IAM",
     title: "Client master data sync",
-    description: "Job titles, ingredients, material groups, production lines and products are imported from your source system so the rest of SmartFoodSafe always references the same list.",
-    direction: { from: "Client system", to: "SmartFoodSafe (IAM)" },
+    description: "Job titles, ingredients, material groups, production lines and products are imported from your source system so the rest of Smart Food Safe always references the same list.",
+    direction: { from: "Client system", to: "Smart Food Safe (IAM)" },
     channels: ["SFTP", "FTP", "API"],
     dataPoints: ["Job titles", "Ingredients", "Material groups", "Production lines", "Products"]
   },
@@ -536,7 +536,7 @@ const INTEGRATIONS = [
     module: "IAM",
     title: "Single sign-on",
     description: "Employees sign in with the credentials they already use, and access is provisioned or revoked from your identity provider.",
-    direction: { from: "Identity provider", to: "SmartFoodSafe (IAM)", bidirectional: true },
+    direction: { from: "Identity provider", to: "Smart Food Safe (IAM)", bidirectional: true },
     channels: ["SAML", "OIDC"],
     dataPoints: ["User identity", "Group / role membership", "Session token"]
   },
@@ -546,7 +546,7 @@ const INTEGRATIONS = [
     module: "LABEL",
     title: "Label & barcode printing",
     description: "Approved label templates are sent to networked printers at the point of production, so what's printed always matches the current specification.",
-    direction: { from: "SmartFoodSafe (LABEL)", to: "Label printer" },
+    direction: { from: "Smart Food Safe (LABEL)", to: "Label printer" },
     channels: ["USB", "Wi-Fi", "API"],
     dataPoints: ["Label template ID", "Batch / lot number", "Barcode payload", "Print quantity"]
   },
@@ -556,7 +556,7 @@ const INTEGRATIONS = [
     module: "INTEGRATE",
     title: "Reporting & data warehouse export",
     description: "Records, audits and CAPA data are pushed to your BI tool or warehouse on a schedule, so food safety metrics sit alongside the rest of your operational reporting.",
-    direction: { from: "SmartFoodSafe (INTEGRATE)", to: "BI tool / data warehouse" },
+    direction: { from: "Smart Food Safe (INTEGRATE)", to: "BI tool / data warehouse" },
     channels: ["API", "Webhook"],
     dataPoints: ["Record & audit events", "CAPA status changes", "Training completions"]
   },
@@ -566,18 +566,18 @@ const INTEGRATIONS = [
     module: "DOCS",
     title: "Document management import",
     description: "Approved SOPs, policies and certificates already stored in your document system are pulled into Smart Docs and kept versioned alongside everything created natively.",
-    direction: { from: "Document system", to: "SmartFoodSafe (DOCS)" },
+    direction: { from: "Document system", to: "Smart Food Safe (DOCS)" },
     channels: ["SFTP", "API"],
     dataPoints: ["Document metadata", "Version number", "Approval status", "File attachment"]
   }
 ];
 
 const CHANNEL_GLOSSARY = [
-  { term: "SFTP", def: "A secure, encrypted file transfer method — the most common way to exchange batch files with SmartFoodSafe." },
+  { term: "SFTP", def: "A secure, encrypted file transfer method — the most common way to exchange batch files with Smart Food Safe." },
   { term: "FTP / FTPS", def: "A plain or TLS-encrypted file transfer method, used where a partner system doesn't support SFTP." },
   { term: "API", def: "A live, request-based connection for systems that need data to move in real time rather than in batches." },
-  { term: "Webhook", def: "A one-way notification SmartFoodSafe sends the moment something changes, instead of a system polling for updates." },
-  { term: "Bluetooth / USB / Wi-Fi", def: "The three ways a physical sensor or gateway can reach SmartFoodSafe without a manual export step." },
+  { term: "Webhook", def: "A one-way notification Smart Food Safe sends the moment something changes, instead of a system polling for updates." },
+  { term: "Bluetooth / USB / Wi-Fi", def: "The three ways a physical sensor or gateway can reach Smart Food Safe without a manual export step." },
   { term: "SAML / OIDC", def: "Standards that let employees sign in with their existing company credentials instead of a separate password." }
 ];
 

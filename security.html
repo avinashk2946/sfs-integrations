@@ -5,9 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trust &amp; Security — Smart Food Safe</title>
 <meta name="description" content="How Smart Food Safe protects your data: certifications, security architecture, privacy, and reliability at a glance.">
+<link rel="icon" href="https://cdn.smartfoodsafe.com/platform/favicon.ico" sizes="any">
+<script>document.documentElement.classList.add('js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
 :root{
   --navy:#003675; --navy-dk:#022B5C; --navy-deep:#0F134E;
@@ -90,6 +92,19 @@ section{padding:78px 0}
 .specs .v{padding:16px 24px;font-size:14.5px;color:var(--grey)}
 @media(max-width:640px){.specs .row{grid-template-columns:1fr}.specs .k{border-right:none;border-bottom:1px solid var(--line);padding-bottom:8px}}
 
+/* ---- FAQ ---- */
+.faq-groups{display:grid;gap:36px}
+.faq-group h3{font-size:21px;color:var(--navy-dk);margin-bottom:14px}
+.faq-list{display:grid;gap:12px}
+.faq-item{border:1px solid var(--line);border-radius:14px;background:var(--paper);overflow:hidden}
+.faq-item summary{list-style:none;cursor:pointer;padding:19px 54px 19px 22px;font-family:'Space Grotesk';font-weight:600;color:var(--navy-dk);position:relative}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);font-size:24px;font-weight:400;color:var(--navy)}
+.faq-item[open] summary::after{content:"\2212"}
+.faq-item[open] summary{border-bottom:1px solid var(--line)}
+.faq-answer{padding:17px 22px 20px;color:var(--grey);font-size:14.5px}
+.faq-answer p+p{margin-top:10px}
+
 /* ---- CTA ---- */
 .contact{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-deep) 100%);color:#fff;text-align:center;position:relative;overflow:hidden}
 .contact::before{content:"";position:absolute;left:-140px;bottom:-160px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(181,254,188,.16),transparent 62%)}
@@ -108,9 +123,69 @@ footer .meta{display:flex;gap:22px;flex-wrap:wrap}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 .js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
 .js .reveal.in{opacity:1;transform:none}
+
+/* ---- smartfoodsafe.com brand system ---- */
+:root{
+  --navy:#0B163F; --navy-dk:#071C4D; --navy-deep:#0B163F;
+  --mint:#E88300; --mint-soft:#FFE8D1;
+  --ink:#0B163F; --grey:#54595F; --line:#E3E7EF;
+  --paper:#FFFFFF; --wash:#F2F5FF; --maxw:1140px;
+}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:#FFFFFF}
+h1,h2,h3,.display{font-family:'Poppins',sans-serif;letter-spacing:-.02em}
+.wrap{padding-left:32px;padding-right:32px}
+.topbar{background:rgba(255,255,255,.94);backdrop-filter:blur(8px)}
+.topbar .wrap{height:68px;position:relative}
+.topbar img{display:none}
+.topbar .wrap::before{
+  content:"";display:block;width:220px;height:28px;
+  background:url('https://cdn.smartfoodsafe.com/platform/logo-full.svg') left center/contain no-repeat;
+}
+.topbar .wrap::after{display:none}
+.navlinks{font-weight:400;color:var(--grey)}
+.navlinks a{padding:4px 2px;border-bottom:2px solid transparent}
+.navlinks a:hover{color:var(--navy);border-bottom-color:#E88300}
+.hero{background:var(--navy-deep)}
+.hero .wrap{padding-top:76px;padding-bottom:72px}
+.eyebrow{font-family:'Plus Jakarta Sans',sans-serif;color:#E88300}
+.eyebrow::before{background:#E88300}
+.hero h1{font-weight:700}
+.btn{border-radius:6px}
+.btn-mint{background:#E88300;color:#fff}
+.strip{background:#071C4D}
+.strip span{font-family:'Plus Jakarta Sans',sans-serif}
+.strip span::before{background:#E88300}
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+.kicker{font-family:'Plus Jakarta Sans',sans-serif;color:#E88300}
+.sec-head h2{font-weight:600;color:var(--ink)}
+.pillar,.card,.specs,.faq-item{border-radius:10px}
+.pillar h3,.card h3,.faq-group h3,.faq-item summary{font-family:'Poppins',sans-serif;color:var(--ink)}
+.pillar .ic{border-radius:6px}
+.card h3{background:var(--navy);color:#fff}
+.faq-item summary{font-weight:600}
+.faq-item summary::after{color:var(--navy)}
+.contact{background:var(--navy-deep)}
+.mail{font-family:'Plus Jakarta Sans',sans-serif;color:#E88300}
+footer{background:#071C4D;color:#DCE5F5;border-top:1px solid #162A5B}
+footer .wrap{padding:40px 32px}
+footer img{display:none}
+footer .wrap::before{
+  content:"";display:block;width:205px;height:24px;
+  background:url('https://cdn.smartfoodsafe.com/platform/logo-full.svg') left center/contain no-repeat;
+  filter:brightness(0) invert(1);
+}
+.page-loader{display:none}
+.js .page-loader{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#fff;transition:opacity .2s ease,visibility .2s ease}
+.js .page-loader.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+.page-loader img{display:block;width:clamp(300px,42vw,520px);height:clamp(300px,42vw,520px);object-fit:contain;filter:none}
+@media(max-width:640px){.wrap{padding-left:20px;padding-right:20px}.topbar .wrap::before{width:180px}.hero .wrap,footer .wrap{padding-left:20px;padding-right:20px}}
 </style>
 </head>
 <body>
+
+<div class="page-loader" id="pageLoader" role="status" aria-label="Loading Smart Food Safe">
+  <img src="https://cdn.smartfoodsafe.com/platform/loader.gif" alt="">
+</div>
 
 <div class="topbar">
   <div class="wrap">
@@ -120,6 +195,7 @@ footer .meta{display:flex;gap:22px;flex-wrap:wrap}
       <a href="#compliance">Compliance</a>
       <a href="#architecture">Architecture</a>
       <a href="#privacy">Privacy</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -127,12 +203,12 @@ footer .meta{display:flex;gap:22px;flex-wrap:wrap}
 
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow">Trust &amp; Security</span>
-    <h1>Security your food-safety data can stand on.</h1>
-    <p>Smart Food Safe is built security-first — from code to cloud to customer. This page gives partners and prospective customers a clear view of how we protect data, stay compliant, and keep the platform running.</p>
+    <span class="eyebrow">Enterprise SaaS security</span>
+    <h1>Your food-safety operations, secured at every layer.</h1>
+    <p>Smart Food Safe is a secure, scalable SaaS platform built to protect business-critical data and keep global teams running with confidence. Enterprise-grade controls, independent assurance, and resilient cloud infrastructure are built into every layer.</p>
     <div class="cta">
-      <a class="btn btn-mint" href="#compliance">See our certifications</a>
-      <a class="btn btn-ghost" href="#contact">Request documentation</a>
+      <a class="btn btn-mint" href="#pillars">Explore our security</a>
+      <a class="btn btn-ghost" href="#contact">Request security documents</a>
     </div>
   </div>
 </header>
@@ -273,6 +349,136 @@ footer .meta{display:flex;gap:22px;flex-wrap:wrap}
   </div>
 </section>
 
+<!-- SUBPROCESSORS -->
+<section id="subprocessors" class="band">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Subprocessors</div>
+      <h2>Third-party infrastructure and services</h2>
+      <p>We engage a limited set of subprocessors for hosting, data storage, CI/CD, and monitoring. Locations shown below.</p>
+    </div>
+    <div class="detail">
+      <div class="card reveal">
+        <h3>Infrastructure providers</h3>
+        <dl>
+          <dt>Google Cloud</dt><dd>Primary cloud services and some managed services — Ireland.</dd>
+          <dt>AWS</dt><dd>Cloud services and delivery (CloudFront, S3) — Ireland.</dd>
+          <dt>MongoDB Atlas</dt><dd>Managed database hosting — Ireland.</dd>
+          <dt>CloudFront</dt><dd>CDN and edge delivery — Ireland.</dd>
+        </dl>
+      </div>
+      <div class="card reveal">
+        <h3>Developer & tooling</h3>
+        <dl>
+          <dt>GitHub</dt><dd>Source code hosting and CI/CD — US.</dd>
+          <dt>Scrut Automation</dt><dd>Security monitoring and automation — US.</dd>
+        </dl>
+      </div>
+    </div>
+    <p style="margin-top:18px;color:var(--grey)">Full and current subprocessor list available on request or in customer agreements.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Frequently asked questions</div>
+      <h2>Security questions, answered clearly</h2>
+      <p>Details about our independent application testing, remediation practices, platform safeguards, data handling, and service resilience.</p>
+    </div>
+    <div class="faq-groups">
+      <div class="faq-group reveal">
+        <h3>Independent assessment &amp; assurance</h3>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Has Smart Food Safe undergone penetration testing?</summary>
+            <div class="faq-answer"><p>Yes. Scrut Automation conducted an independent web-application vulnerability assessment and penetration test using both manual and automated methods. The final report was issued on February 18, 2026.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>What was included in the assessment?</summary>
+            <div class="faq-answer"><p>The review covered the staging web application and included authenticated and unauthenticated testing, application fingerprinting, vulnerability scanning, manual analysis, safe exploitation where appropriate, and retesting. Testing was aligned with the OWASP Top 10 and covered areas such as authentication, authorization, sessions, input validation, cryptography, business logic, configuration, and client-side security.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Does a penetration test guarantee that no vulnerabilities exist?</summary>
+            <div class="faq-answer"><p>No. A penetration test provides a point-in-time assessment of the tested environment and scope. New issues can emerge as applications, dependencies, and attack techniques change, so testing is part of an ongoing vulnerability-management program.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Can customers request the full report?</summary>
+            <div class="faq-answer"><p>The detailed report contains confidential technical evidence and is shared with eligible customers and prospects through the appropriate review process. Contact our team to request security documentation.</p></div>
+          </details>
+        </div>
+      </div>
+
+      <div class="faq-group reveal">
+        <h3>Findings &amp; remediation</h3>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What did the 2026 assessment find?</summary>
+            <div class="faq-answer"><p>The assessment reported five findings: one medium-severity issue and four low-severity issues. No critical or high-severity findings were reported. The findings related to API-key restrictions, third-party script controls, input validation, Content Security Policy, and outdated software components.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Were the findings remediated?</summary>
+            <div class="faq-answer"><p>At the report's February 18, 2026 retest, the medium-severity API-key issue and two low-severity browser-security issues were marked fixed. Two low-severity items—server-side input validation and vulnerable component versions—remained open and were identified for remediation. Statuses here reflect that dated report and may change as remediation and validation continue.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>How are vulnerabilities prioritized?</summary>
+            <div class="faq-answer"><p>Findings are evaluated by severity, exploitability, and potential impact. Remediation focuses first on higher-risk issues, while lower-risk findings are tracked through the vulnerability-management process and retested to confirm that fixes are effective.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>How does Smart Food Safe reduce injection and browser-based risks?</summary>
+            <div class="faq-answer"><p>Controls include server-side input validation, secure-coding practices, dependency updates, restricted external resources, and Content Security Policy headers. These safeguards are supported by recurring scanning, manual testing, and remediation tracking.</p></div>
+          </details>
+        </div>
+      </div>
+
+      <div class="faq-group reveal">
+        <h3>Platform protection &amp; access</h3>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How is customer data encrypted?</summary>
+            <div class="faq-answer"><p>Data is encrypted at rest using AES-256 and protected in transit using TLS 1.2 or later. Passwords are stored as hashes rather than plain text.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>How is access to the platform controlled?</summary>
+            <div class="faq-answer"><p>Smart Food Safe uses role-based access control and least-privilege principles. The platform supports single sign-on with Microsoft and Google, along with multi-factor authentication.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>How is each customer's data separated?</summary>
+            <div class="faq-answer"><p>Each customer is assigned a unique tenant identifier, with logical isolation and row-level security used to keep tenant data separated within the multi-tenant SaaS platform.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>How is suspicious activity detected?</summary>
+            <div class="faq-answer"><p>Infrastructure and application activity is continuously monitored with real-time alerting and audit logging. Monitoring includes AWS CloudWatch, Datadog, and Grafana, supported by an incident-response process.</p></div>
+          </details>
+        </div>
+      </div>
+
+      <div class="faq-group reveal">
+        <h3>Privacy, continuity &amp; recovery</h3>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Who owns customer data?</summary>
+            <div class="faq-answer"><p>Customers retain ownership of their data. It is not used for commercial purposes and can be exported on request in standard formats such as CSV, JSON, Excel, and PDF.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>What happens to data when a customer leaves?</summary>
+            <div class="faq-answer"><p>Data can be exported and is then securely deleted in line with the applicable retention, disposal, and sanitization procedures.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>How are backups and disaster recovery handled?</summary>
+            <div class="faq-answer"><p>Automated daily backups are encrypted in transit and at rest, with restoration testing performed quarterly. A documented disaster-recovery runbook supports cross-region failover and recovery of mission-critical services.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>What availability does Smart Food Safe target?</summary>
+            <div class="faq-answer"><p>The platform is engineered for 99.9% uptime using auto-scaling cloud infrastructure, replicated data services, monitoring, backups, and tested recovery procedures.</p></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact" class="contact">
   <div class="wrap">
@@ -298,6 +504,10 @@ const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.t
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 // Safety net: if anything is still hidden shortly after load, reveal it.
 window.addEventListener('load',()=>setTimeout(()=>{document.querySelectorAll('.reveal:not(.in)').forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight)el.classList.add('in')});},400));
+window.addEventListener('load',()=>{
+  const loader=document.getElementById('pageLoader');
+  if(loader){loader.classList.add('is-hidden');setTimeout(()=>loader.remove(),250)}
+});
 </script>
 </body>
 </html>

@@ -1,0 +1,394 @@
+{
+  "page": {
+    "title": "Trust & Security — Smart Food Safe",
+    "description": "How Smart Food Safe protects your data: certifications, security architecture, privacy, and reliability at a glance."
+  },
+  "assets": {
+    "favicon": "https://cdn.smartfoodsafe.com/platform/favicon.ico",
+    "logo": "https://cdn.smartfoodsafe.com/platform/logo-full.svg",
+    "loader": "https://cdn.smartfoodsafe.com/platform/loader.gif"
+  },
+  "navigation": {
+    "variant": "security",
+    "links": [
+      {
+        "label": "Overview",
+        "href": "#pillars"
+      },
+      {
+        "label": "Compliance",
+        "href": "#compliance"
+      },
+      {
+        "label": "Architecture",
+        "href": "#architecture"
+      },
+      {
+        "label": "Privacy",
+        "href": "#privacy"
+      },
+      {
+        "label": "FAQ",
+        "href": "#faq"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "Enterprise SaaS security",
+    "title": "Your food-safety operations, secured at every layer.",
+    "description": "Smart Food Safe is a secure, scalable SaaS platform built to protect business-critical data and keep global teams running with confidence. Enterprise-grade controls, independent assurance, and resilient cloud infrastructure are built into every layer.",
+    "buttons": [
+      {
+        "label": "Explore our security",
+        "href": "#pillars",
+        "style": "primary"
+      },
+      {
+        "label": "Request security documents",
+        "href": "#contact",
+        "style": "secondary"
+      }
+    ]
+  },
+  "trustStrip": [
+    "ISO 27001:2022",
+    "SOC 2 Type II",
+    "GDPR compliant",
+    "AES-256 encryption",
+    "99.9% uptime target"
+  ],
+  "pillars": {
+    "id": "pillars",
+    "kicker": "At a glance",
+    "title": "Six ways we protect your data",
+    "description": "Security isn't a single feature - it's designed into every layer of the platform. Here's how it holds together.",
+    "items": [
+      {
+        "icon": "shield",
+        "title": "Certified & audited",
+        "description": "ISO 27001:2022 and SOC 2 Type II, with independent external audits and GDPR compliance built into how we operate."
+      },
+      {
+        "icon": "lock",
+        "title": "Encrypted everywhere",
+        "description": "AES-256 for data at rest and TLS 1.2+ in transit. Passwords are stored hashed, never in plain text."
+      },
+      {
+        "icon": "user",
+        "title": "Access on least privilege",
+        "description": "Role-based access, SSO with Microsoft and Google, and multi-factor authentication for every user."
+      },
+      {
+        "icon": "clock",
+        "title": "Resilient by design",
+        "description": "Auto-scaling AWS architecture with a replicated database, daily encrypted backups, and tested disaster recovery."
+      },
+      {
+        "icon": "box",
+        "title": "Your data stays yours",
+        "description": "You own your data at all times, can export it on request, and it's never used for commercial purposes."
+      },
+      {
+        "icon": "search",
+        "title": "Watched around the clock",
+        "description": "Continuous monitoring, full audit logging, and a proactive incident-response process with clear response times."
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "compliance",
+      "style": "band",
+      "kicker": "Compliance & certifications",
+      "title": "Independently verified, continuously monitored",
+      "description": "Our security program is built on recognized standards and validated by third-party auditors. Certificates and reports are available to customers and prospects on request.",
+      "cards": [
+        {
+          "title": "Certifications we hold",
+          "items": [
+            [
+              "ISO 27001:2022",
+              "Certified information security management system."
+            ],
+            [
+              "SOC 2 Type II",
+              "Independent attestation of our security controls over time."
+            ],
+            [
+              "GDPR",
+              "Compliant, including data-subject rights and breach-notification procedures."
+            ],
+            [
+              "External audits",
+              "Security audits performed regularly by qualified third parties."
+            ]
+          ]
+        },
+        {
+          "title": "How we test our security",
+          "items": [
+            [
+              "Penetration testing",
+              "Independent and internal VAPT testing on a recurring basis."
+            ],
+            [
+              "Vulnerability scanning",
+              "Regular application and code scanning, with findings tracked to remediation."
+            ],
+            [
+              "OWASP Top 10",
+              "Secure-coding practices, input validation, and a web application firewall."
+            ],
+            [
+              "Continuous compliance",
+              "Ongoing monitoring of controls and third-party subprocessors."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "architecture",
+      "kicker": "Platform & architecture",
+      "title": "Built on a resilient cloud foundation",
+      "description": "Smart Food Safe is a multi-tenant SaaS platform hosted on Amazon Web Services, engineered to scale and to stay available.",
+      "specs": [
+        [
+          "Hosting",
+          "Amazon Web Services (AWS), primary region eu-west-1 (Ireland). Fully cloud-based - no customer-deployed software required."
+        ],
+        [
+          "Architecture",
+          "Containerized microservices on AWS ECS with blue/green deployments and auto-scaling; CloudFront and S3 for delivery and storage."
+        ],
+        [
+          "Database",
+          "MongoDB Atlas replica set across multiple nodes, with compute and storage auto-scaling and cross-region backup snapshots."
+        ],
+        [
+          "Tenant isolation",
+          "Logical isolation per customer using a unique tenant identifier and row-level security."
+        ],
+        [
+          "Availability target",
+          "Engineered for 99.9% uptime. Real-time status is published at status.smartfoodsafe.com."
+        ],
+        [
+          "Backups",
+          "Automated daily backups, encrypted in transit and at rest, with quarterly restoration testing."
+        ],
+        [
+          "Disaster recovery",
+          "Documented, tested DR runbook with cross-region failover. Most recent test recovered all mission-critical modules within target."
+        ],
+        [
+          "Monitoring",
+          "Continuous monitoring via AWS CloudWatch, Datadog, and Grafana, with real-time alerting and full audit logging."
+        ]
+      ]
+    },
+    {
+      "id": "privacy",
+      "style": "band",
+      "kicker": "Data privacy",
+      "title": "Clear rules for your data",
+      "description": "We process only what's needed to deliver the service, and we're transparent about how it's handled.",
+      "cards": [
+        {
+          "title": "What we protect",
+          "items": [
+            [
+              "Ownership",
+              "You retain full ownership of your data at all times."
+            ],
+            [
+              "Portability",
+              "Export your data on request in standard formats (CSV, JSON, Excel, PDF)."
+            ],
+            [
+              "Deletion",
+              "On termination, data is exported and then securely deleted to recognized sanitization standards."
+            ],
+            [
+              "No commercial use",
+              "Customer data is never used for commercial purposes."
+            ]
+          ]
+        },
+        {
+          "title": "How we handle it",
+          "items": [
+            [
+              "Minimal data",
+              "No payment-card data, health records, government IDs, or biometric data are collected."
+            ],
+            [
+              "Data-subject rights",
+              "Requests for correction or deletion are handled per our retention and disposal policy."
+            ],
+            [
+              "Subprocessors",
+              "A current list of infrastructure subprocessors is available on request."
+            ],
+            [
+              "Policies",
+              "Privacy Policy and Data Protection Addendum are published on our website."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "subprocessors",
+      "style": "band",
+      "kicker": "Subprocessors",
+      "title": "Third-party infrastructure and services",
+      "description": "We engage a limited set of subprocessors for hosting, data storage, CI/CD, and monitoring. Locations shown below.",
+      "cards": [
+        {
+          "title": "Infrastructure providers",
+          "items": [
+            [
+              "Google Cloud",
+              "Primary cloud services and some managed services - Ireland."
+            ],
+            [
+              "AWS",
+              "Cloud services and delivery (CloudFront, S3) - Ireland."
+            ],
+            [
+              "MongoDB Atlas",
+              "Managed database hosting - Ireland."
+            ],
+            [
+              "CloudFront",
+              "CDN and edge delivery - Ireland."
+            ]
+          ]
+        },
+        {
+          "title": "Developer & tooling",
+          "items": [
+            [
+              "GitHub",
+              "Source code hosting and CI/CD - US."
+            ],
+            [
+              "Scrut Automation",
+              "Security monitoring and automation - US."
+            ]
+          ]
+        }
+      ],
+      "note": "Full and current subprocessor list available on request or in customer agreements."
+    }
+  ],
+  "faq": {
+    "id": "faq",
+    "kicker": "Frequently asked questions",
+    "title": "Security questions, answered clearly",
+    "description": "Details about our independent application testing, remediation practices, platform safeguards, data handling, and service resilience.",
+    "groups": [
+      {
+        "title": "Independent assessment & assurance",
+        "items": [
+          [
+            "Has Smart Food Safe undergone penetration testing?",
+            "Yes. Scrut Automation conducted an independent web-application vulnerability assessment and penetration test using both manual and automated methods. The final report was issued on February 18, 2026."
+          ],
+          [
+            "What was included in the assessment?",
+            "The review covered the staging web application and included authenticated and unauthenticated testing, application fingerprinting, vulnerability scanning, manual analysis, safe exploitation where appropriate, and retesting. Testing was aligned with the OWASP Top 10 and covered areas such as authentication, authorization, sessions, input validation, cryptography, business logic, configuration, and client-side security."
+          ],
+          [
+            "Does a penetration test guarantee that no vulnerabilities exist?",
+            "No. A penetration test provides a point-in-time assessment of the tested environment and scope. New issues can emerge as applications, dependencies, and attack techniques change, so testing is part of an ongoing vulnerability-management program."
+          ],
+          [
+            "Can customers request the full report?",
+            "The detailed report contains confidential technical evidence and is shared with eligible customers and prospects through the appropriate review process. Contact our team to request security documentation."
+          ]
+        ]
+      },
+      {
+        "title": "Findings & remediation",
+        "items": [
+          [
+            "What did the 2026 assessment find?",
+            "The assessment reported five findings: one medium-severity issue and four low-severity issues. No critical or high-severity findings were reported. The findings related to API-key restrictions, third-party script controls, input validation, Content Security Policy, and outdated software components."
+          ],
+          [
+            "Were the findings remediated?",
+            "At the report's February 18, 2026 retest, the medium-severity API-key issue and two low-severity browser-security issues were marked fixed. Two low-severity items - server-side input validation and vulnerable component versions - remained open and were identified for remediation. Statuses here reflect that dated report and may change as remediation and validation continue."
+          ],
+          [
+            "How are vulnerabilities prioritized?",
+            "Findings are evaluated by severity, exploitability, and potential impact. Remediation focuses first on higher-risk issues, while lower-risk findings are tracked through the vulnerability-management process and retested to confirm that fixes are effective."
+          ],
+          [
+            "How does Smart Food Safe reduce injection and browser-based risks?",
+            "Controls include server-side input validation, secure-coding practices, dependency updates, restricted external resources, and Content Security Policy headers. These safeguards are supported by recurring scanning, manual testing, and remediation tracking."
+          ]
+        ]
+      },
+      {
+        "title": "Platform protection & access",
+        "items": [
+          [
+            "How is customer data encrypted?",
+            "Data is encrypted at rest using AES-256 and protected in transit using TLS 1.2 or later. Passwords are stored as hashes rather than plain text."
+          ],
+          [
+            "How is access to the platform controlled?",
+            "Smart Food Safe uses role-based access control and least-privilege principles. The platform supports single sign-on with Microsoft and Google, along with multi-factor authentication."
+          ],
+          [
+            "How is each customer's data separated?",
+            "Each customer is assigned a unique tenant identifier, with logical isolation and row-level security used to keep tenant data separated within the multi-tenant SaaS platform."
+          ],
+          [
+            "How is suspicious activity detected?",
+            "Infrastructure and application activity is continuously monitored with real-time alerting and audit logging. Monitoring includes AWS CloudWatch, Datadog, and Grafana, supported by an incident-response process."
+          ]
+        ]
+      },
+      {
+        "title": "Privacy, continuity & recovery",
+        "items": [
+          [
+            "Who owns customer data?",
+            "Customers retain ownership of their data. It is not used for commercial purposes and can be exported on request in standard formats such as CSV, JSON, Excel, and PDF."
+          ],
+          [
+            "What happens to data when a customer leaves?",
+            "Data can be exported and is then securely deleted in line with the applicable retention, disposal, and sanitization procedures."
+          ],
+          [
+            "How are backups and disaster recovery handled?",
+            "Automated daily backups are encrypted in transit and at rest, with restoration testing performed quarterly. A documented disaster-recovery runbook supports cross-region failover and recovery of mission-critical services."
+          ],
+          [
+            "What availability does Smart Food Safe target?",
+            "The platform is engineered for 99.9% uptime using auto-scaling cloud infrastructure, replicated data services, monitoring, backups, and tested recovery procedures."
+          ]
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "id": "contact",
+    "title": "Need more detail?",
+    "description": "Customers and prospective customers can request our full security documentation, certificates, and reports - including our SOC 2 report, DR test results, and subprocessor list.",
+    "email": "support@smartfoodsafe.com"
+  },
+  "footer": {
+    "meta": [
+      "© 2026 Smart Food Safe Solutions Inc.",
+      "Last updated: August 2026"
+    ]
+  }
+}

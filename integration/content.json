@@ -1,0 +1,513 @@
+{
+  "page": {
+    "title": "Integrations - Smart Food Safe",
+    "description": "How Smart Food Safe connects to IoT temperature devices, external laboratories, Master Data systems, and more."
+  },
+  "assets": {
+    "favicon": "https://cdn.smartfoodsafe.com/platform/favicon.ico",
+    "logo": "https://cdn.smartfoodsafe.com/platform/logo-full.svg",
+    "loader": "https://cdn.smartfoodsafe.com/platform/loader.gif"
+  },
+  "navigation": {
+    "variant": "integrations",
+    "links": [
+      {
+        "label": "Overview",
+        "href": "#overview"
+      },
+      {
+        "label": "Integrations",
+        "href": "#integrations"
+      },
+      {
+        "label": "Connection types",
+        "href": "#glossary"
+      },
+      {
+        "label": "FAQ",
+        "href": "#faq"
+      },
+      {
+        "label": "Talk to integrations team",
+        "href": "#contact",
+        "style": "primary"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Every part of your food safety operation, already wired together.",
+    "description": "Smart Food Safe reads temperature straight off the sensor, sends samples to your lab and brings results back automatically, and keeps job titles, ingredients and production lines in sync with the systems you already run.",
+    "stats": [
+      {
+        "value": "3",
+        "label": "connection categories in production"
+      },
+      {
+        "value": "8+",
+        "label": "protocols supported end to end"
+      },
+      {
+        "value": "14",
+        "label": "modules an integration can feed"
+      }
+    ],
+    "diagram": {
+      "ariaLabel": "Diagram showing IoT sensors, external laboratories, and Master Data systems all connecting into Smart Food Safe",
+      "sources": [
+        {
+          "title": "IoT sensors",
+          "subtitle": "BLE · USB · Wi-Fi"
+        },
+        {
+          "title": "External labs",
+          "subtitle": "SFTP · FTP · API"
+        },
+        {
+          "title": "Master Data",
+          "subtitle": "SFTP · FTP · API"
+        }
+      ],
+      "target": {
+        "title": "Smart Food Safe",
+        "subtitle": "RECORD · LAB · IAM"
+      }
+    }
+  },
+  "overview": {
+    "id": "overview",
+    "title": "Four categories of connections",
+    "description": "Everything below is generated from a single data file, so the integrations team can add a new connection without touching the layout."
+  },
+  "directory": {
+    "id": "integrations",
+    "title": "Integration directory",
+    "description": "Filter by category to see exactly how each connection moves data in or out of Smart Food Safe, and which channels it supports."
+  },
+  "categories": [
+    {
+      "id": "iot",
+      "label": "IoT devices",
+      "blurb": "Sensors and instruments that stream readings straight into Smart Food Safe."
+    },
+    {
+      "id": "lab",
+      "label": "Laboratory",
+      "blurb": "Order and result exchange with third-party testing labs."
+    },
+    {
+      "id": "master",
+      "label": "Master data",
+      "blurb": "Reference data kept in sync with your source systems."
+    },
+    {
+      "id": "other",
+      "label": "Other",
+      "blurb": "Identity, printing and reporting connections."
+    }
+  ],
+  "integrations": [
+    {
+      "id": "temp-devices",
+      "category": "iot",
+      "module": "RECORD",
+      "title": "Temperature & environmental sensors",
+      "description": "Bluetooth, USB and Wi-Fi probes report temperature and humidity readings directly into Smart Record, replacing manual logging on the plant floor.",
+      "direction": {
+        "from": "Sensor / gateway",
+        "to": "Smart Food Safe (RECORD)"
+      },
+      "channels": [
+        "Bluetooth",
+        "USB",
+        "Wi-Fi"
+      ],
+      "dataPoints": [
+        "Reading value & unit",
+        "Device ID",
+        "Timestamp",
+        "Location / asset tag",
+        "Battery & signal status"
+      ]
+    },
+    {
+      "id": "lab-orders",
+      "category": "lab",
+      "module": "LAB",
+      "title": "External laboratory orders & results",
+      "description": "Sample orders go out to your testing partner and results are matched back automatically, over whichever channel the lab supports, including partners such as Merieux NutriSciences.",
+      "direction": {
+        "from": "Smart Food Safe (LAB)",
+        "to": "External laboratory",
+        "bidirectional": true
+      },
+      "channels": [
+        "SFTP",
+        "FTP",
+        "FTPS",
+        "API"
+      ],
+      "dataPoints": [
+        "Sample ID & customer sample number",
+        "Test panel requested",
+        "Result value & unit",
+        "Pass / fail flag",
+        "Report attachment"
+      ]
+    },
+    {
+      "id": "master-data",
+      "category": "master",
+      "module": "IAM",
+      "title": "Master Data sync",
+      "description": "Job titles, ingredients, material groups, production lines and products are imported from your source system so the rest of Smart Food Safe always references the same list.",
+      "direction": {
+        "from": "Client system",
+        "to": "Smart Food Safe (IAM)"
+      },
+      "channels": [
+        "SFTP",
+        "FTP",
+        "API"
+      ],
+      "dataPoints": [
+        "Job titles",
+        "Ingredients",
+        "Material groups",
+        "Production lines",
+        "Products"
+      ]
+    },
+    {
+      "id": "sso",
+      "category": "other",
+      "module": "IAM",
+      "title": "Single sign-on",
+      "description": "Employees sign in with their existing Microsoft Entra ID credentials. Authentication is handled through Azure OpenID Connect (OIDC), while user access and roles remain managed in Smart Food Safe IAM.",
+      "direction": {
+        "from": "Identity provider",
+        "to": "Smart Food Safe (IAM)",
+        "bidirectional": true
+      },
+      "channels": [
+        "Azure OIDC"
+      ],
+      "dataPoints": [
+        "Display name",
+        "Email address",
+        "Authentication token"
+      ],
+      "questionnaire": [
+        {
+          "question": "Does an Enterprise Application already exist? If so, what is its name?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "text": "TBD. The client will configure the Enterprise Application in its Identity Provider environment (for example, Microsoft Entra ID / Azure AD) during SSO onboarding."
+            },
+            {
+              "type": "link",
+              "label": "View the Microsoft SSO configuration guide",
+              "href": "https://gbqms.smartfoodsafe.com/smart-customer-support/index.html#/customersupport/customer/iam/security-configuration/smart-iam---set-up-microsoft-single-sign-on-sso-for-smart-food-safe"
+            }
+          ]
+        },
+        {
+          "question": "Which authentication protocol is used, where is the Entity ID / Client ID stored, and what is the SaaS application URL?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "text": "Smart Food Safe uses Azure OIDC (OpenID Connect) for SSO integration."
+            },
+            {
+              "type": "list",
+              "items": [
+                "Entity ID / Client ID storage: Stored securely in Smart Food Safe as encrypted data using a unique encryption key.",
+                "SaaS application URL: https://*.smartfoodsafe.com, where * is the client-specific subdomain."
+              ]
+            }
+          ]
+        },
+        {
+          "question": "Which user attributes are mapped?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "text": "The Azure SSO response currently maps:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "user.displayName",
+                "user.email"
+              ]
+            }
+          ]
+        },
+        {
+          "question": "Will SCIM provisioning be enabled and configured using a SaaS API token?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "text": "SCIM provisioning is not currently enabled. SCIM integration is planned for a future release; timing is subject to the product roadmap."
+            }
+          ]
+        },
+        {
+          "question": "Can users and groups be assigned to the Enterprise Application?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "text": "Yes. Smart Food Safe IAM supports user and group assignment, including:"
+            },
+            {
+              "type": "list",
+              "items": [
+                "User creation and management",
+                "Role-based access control (RBAC)",
+                "Configurable access levels and permissions",
+                "User groups organized by role or department",
+                "Access control through the IAM module"
+              ]
+            }
+          ]
+        },
+        {
+          "question": "Will MFA be enforced, and how often is re-authentication required?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "text": "Yes, MFA can be enforced. For SSO users, the client configures and enforces MFA through Microsoft Entra ID Conditional Access policies."
+            },
+            {
+              "type": "paragraph",
+              "text": "Smart Food Safe does not impose an application-level SSO MFA frequency. Re-authentication and MFA prompt frequency are controlled by the client’s IT or security team in Microsoft Entra ID."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "label-printing",
+      "category": "other",
+      "module": "LABEL",
+      "title": "Label & barcode printing",
+      "description": "Approved label templates are sent to networked printers at the point of production, so what is printed always matches the current specification.",
+      "direction": {
+        "from": "Smart Food Safe (LABEL)",
+        "to": "Label printer"
+      },
+      "channels": [
+        "USB",
+        "Wi-Fi",
+        "API"
+      ],
+      "dataPoints": [
+        "Label template ID",
+        "Batch / lot number",
+        "Barcode payload",
+        "Print quantity"
+      ]
+    },
+    {
+      "id": "reporting",
+      "category": "other",
+      "module": "INTEGRATE",
+      "title": "Reporting & data warehouse export",
+      "description": "Records, audits and CAPA data are pushed to your BI tool or warehouse on a schedule, so food safety metrics sit alongside the rest of your operational reporting.",
+      "direction": {
+        "from": "Smart Food Safe (INTEGRATE)",
+        "to": "BI tool / data warehouse"
+      },
+      "channels": [
+        "API",
+        "Webhook"
+      ],
+      "dataPoints": [
+        "Record & audit events",
+        "CAPA status changes",
+        "Training completions"
+      ]
+    },
+    {
+      "id": "doc-import",
+      "category": "other",
+      "module": "DOCS",
+      "title": "Document management import",
+      "description": "Approved SOPs, policies and certificates already stored in your document system are pulled into Smart Docs and kept versioned alongside everything created natively.",
+      "direction": {
+        "from": "Document system",
+        "to": "Smart Food Safe (DOCS)"
+      },
+      "channels": [
+        "SFTP",
+        "API"
+      ],
+      "dataPoints": [
+        "Document metadata",
+        "Version number",
+        "Approval status",
+        "File attachment"
+      ]
+    },
+    {
+      "id": "microsoft-wopi",
+      "category": "other",
+      "module": "DOCS",
+      "title": "Microsoft 365 document editing (WOPI)",
+      "description": "Users can open and edit supported Smart Docs files in Microsoft 365 for the web while Smart Food Safe remains the document system of record. The WOPI connection coordinates file access, locking, updates and version-aware saves without requiring a separate manual download and upload step.",
+      "direction": {
+        "from": "Smart Food Safe (WOPI host)",
+        "to": "Microsoft 365 for the web (WOPI client)",
+        "bidirectional": true
+      },
+      "channels": [
+        "WOPI REST API",
+        "HTTPS"
+      ],
+      "dataPoints": [
+        "File ID & metadata",
+        "User permissions",
+        "Access token",
+        "File contents",
+        "Lock state",
+        "Updated file version"
+      ],
+      "questionnaire": [
+        {
+          "question": "What role does each platform perform in the WOPI integration?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "text": "Smart Food Safe acts as the WOPI host: it stores the document and exposes the required WOPI endpoints. Microsoft 365 for the web acts as the WOPI client that displays and edits the document."
+            }
+          ]
+        },
+        {
+          "question": "How are documents opened and saved?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "text": "Smart Food Safe launches the appropriate Microsoft 365 editor using the action URL returned by WOPI discovery. Microsoft then reads file information and content through WOPI and sends updated content back to the Smart Food Safe endpoint when the document is saved."
+            }
+          ]
+        },
+        {
+          "question": "Which core WOPI operations are involved?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "text": "The implementation uses the operations required for the enabled viewing or editing scenario, including CheckFileInfo, GetFile and PutFile. Editing scenarios can also use WOPI lock operations to prevent conflicting updates."
+            }
+          ]
+        },
+        {
+          "question": "How is access secured?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "text": "Requests are made over HTTPS and authorized using short-lived, document-scoped access tokens issued by Smart Food Safe. The host validates the token, requested file and user permissions before returning content or accepting an update."
+            }
+          ]
+        },
+        {
+          "question": "Which document formats are supported?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "text": "Supported formats depend on the Microsoft 365 for the web actions available through WOPI discovery and the viewing or editing capabilities enabled for the tenant. The final format list is confirmed during implementation."
+            }
+          ]
+        },
+        {
+          "question": "What is required before production enablement?",
+          "answer": [
+            {
+              "type": "paragraph",
+              "text": "The integration requires an approved Microsoft 365 for the web / Cloud Storage Partner configuration, publicly reachable HTTPS WOPI endpoints, discovery configuration, token and proof-key validation, and successful Microsoft conformance testing. Tenant-specific licensing and rollout requirements are confirmed during onboarding."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "glossary": {
+    "id": "glossary",
+    "title": "Connection types, in plain terms",
+    "description": "The channels referenced throughout this page, for anyone on your team who isn't deep in the protocol names.",
+    "items": [
+      {
+        "term": "SFTP",
+        "definition": "A secure, encrypted file transfer method - the most common way to exchange batch files with Smart Food Safe."
+      },
+      {
+        "term": "FTP / FTPS",
+        "definition": "A plain or TLS-encrypted file transfer method, used where a partner system does not support SFTP."
+      },
+      {
+        "term": "API",
+        "definition": "A live, request-based connection for systems that need data to move in real time rather than in batches."
+      },
+      {
+        "term": "Webhook",
+        "definition": "A one-way notification Smart Food Safe sends the moment something changes, instead of a system polling for updates."
+      },
+      {
+        "term": "Bluetooth / USB / Wi-Fi",
+        "definition": "The three ways a physical sensor or gateway can reach Smart Food Safe without a manual export step."
+      },
+      {
+        "term": "SAML / OIDC",
+        "definition": "Standards that let employees sign in with their existing company credentials instead of a separate password."
+      },
+      {
+        "term": "WOPI",
+        "definition": "Microsoft web application protocol for opening and editing files in Microsoft 365 for the web while the source platform continues to store and control the document."
+      }
+    ]
+  },
+  "faq": {
+    "id": "faq",
+    "title": "Integration questions, answered",
+    "description": "A quick guide to scope, connection methods, ownership, and implementation.",
+    "items": [
+      {
+        "question": "Can Smart Food Safe connect to a system that is not listed?",
+        "answer": "Yes. Most new connections can be built using an API, SFTP, FTP, or a supported device protocol. We review the source system, data format, frequency, and direction before confirming scope."
+      },
+      {
+        "question": "Can an integration send and receive data?",
+        "answer": "Yes. Connections may be inbound, outbound, or bidirectional depending on the workflow and the capabilities of the other system."
+      },
+      {
+        "question": "How is integration data secured?",
+        "answer": "Connections use the security controls appropriate to the channel, including encrypted transport, authenticated endpoints, scoped credentials, and access based on least privilege."
+      },
+      {
+        "question": "What is needed to estimate an implementation?",
+        "answer": "A sample payload or file, the expected data flow, update frequency, authentication method, target Smart Food Safe module, and access to a technical contact are usually enough for an initial estimate."
+      }
+    ]
+  },
+  "cta": {
+    "id": "contact",
+    "title": "Don't see your system on this page?",
+    "description": "Most integrations start from one of the channels above - SFTP, FTP, API or a direct device connection. Tell us what you're running today and we'll scope the connection.",
+    "button": {
+      "label": "Email the integrations team",
+      "href": "mailto:support@smartfoodsafe.com"
+    }
+  },
+  "footer": {
+    "notice": "© 2026 Smart Food Safe. All connection details on this page are illustrative and configured per client.",
+    "links": [
+      {
+        "label": "smartfoodsafe.com",
+        "href": "https://smartfoodsafe.com/#"
+      },
+      {
+        "label": "Back to top",
+        "href": "#top"
+      }
+    ]
+  }
+}
